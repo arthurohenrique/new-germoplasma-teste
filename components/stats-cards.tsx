@@ -1,4 +1,4 @@
-import { Coffee, ThumbsUp, ThumbsDown, type LucideIcon } from 'lucide-react'
+import { Coffee, ThumbsUp, ThumbsDown } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card"
 
 const iconMap = {

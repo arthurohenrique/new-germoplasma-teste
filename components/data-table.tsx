@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import {
   Table,
   TableBody,
@@ -10,7 +9,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 interface DataTableProps {
-  data: Array<{ [key: string]: any }>;
+  data: Array<{ [key: string]: unknown }>;
   searchTerm: string;
 }
 
@@ -45,13 +44,13 @@ export function DataTable({ data, searchTerm }: DataTableProps) {
             <TableBody>
               {filteredData.map((row, index) => (
                 <TableRow key={index}>
-                  <TableCell>{row.numero}</TableCell>
-                  <TableCell>{row.material}</TableCell>
-                  <TableCell>{row.local}</TableCell>
-                  <TableCell>{row.proprietario}</TableCell>
-                  <TableCell>{row.idade}</TableCell>
-                  <TableCell>{row.data}</TableCell>
-                  <TableCell>{row.coletor}</TableCell>
+                  <TableCell>{row.numero as string}</TableCell>
+                  <TableCell>{row.material as string}</TableCell>
+                  <TableCell>{row.local as string}</TableCell>
+                  <TableCell>{row.proprietario as string}</TableCell>
+                  <TableCell>{row.idade as string}</TableCell>
+                  <TableCell>{row.data as string}</TableCell>
+                  <TableCell>{row.coletor as string}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -61,4 +60,3 @@ export function DataTable({ data, searchTerm }: DataTableProps) {
     </Card>
   )
 }
-

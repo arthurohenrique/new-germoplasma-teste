@@ -13,9 +13,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 
 export default function HomePage() {
   const [statsCards, setStatsCards] = useState([
-    { title: 'Totais', value: 1327, description: 'germoplasma de café cadastrados', icon: 'Coffee' as 'Coffee' },
-    { title: 'Resistentes à Ferrugem', value: 999, description: 'germoplasma resistentes', icon: 'ThumbsUp' as 'ThumbsUp' },
-    { title: 'Não resistentes à Ferrugem', value: 999, description: 'germoplasma não resistentes', icon: 'ThumbsDown' as 'ThumbsDown' },
+    { title: 'Totais', value: 1327, description: 'germoplasma de café cadastrados', icon: 'Coffee' as const },
+    { title: 'Resistentes à Ferrugem', value: 999, description: 'germoplasma resistentes', icon: 'ThumbsUp' as const },
+    { title: 'Não resistentes à Ferrugem', value: 999, description: 'germoplasma não resistentes', icon: 'ThumbsDown' as const },
   ])
 
   const [tableData, setTableData] = useState([
@@ -59,7 +59,6 @@ export default function HomePage() {
       setInfoCards(infoCards.slice(0, -1))
     }
   }
-
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -282,4 +281,3 @@ function AddInfoCardDialog({ onAdd }: { onAdd: (newCard: { title: string; descri
     </Dialog>
   )
 }
-
